@@ -7,6 +7,8 @@
 @highLineColor:green;
 @highLineBgColor:pink;
 
+@bodyBgColor:#eee;
+
 
 
 
@@ -68,15 +70,50 @@
 	display:block;
 }
 
-html.body{
+.bg-w{
+	background:white;
+}
+
+.ta-c{
+	text-align:center;
+}
+
+.ta-l{
+	text-align:left;
+}
+
+.c-w{
+	color:white;
+}
+
+.c-r{
+	color:red;
+}
+
+.p-a{
+	position:absolute;
+}
+
+.p-r{
+	position:relative;
+}
+
+html,body{
 	height:100%;
 	width:100%;
-	marign:0px;
+	padding: 0;
+    margin: 0;
 
 }
 
 body{
 	.fs(16px);
+	background:@bodyBgColor;
+}
+
+button{
+	outline-width:0;
+	border-width:0;
 }
 
 
@@ -99,6 +136,12 @@ body{
 	    .pr(15);
 
 
+	}
+
+	.back-btn{
+	    font-size:20px;
+	    width:1rem;
+	    left:0;
 	}
 }
 
@@ -129,68 +172,122 @@ body{
 	padding:0;
 	margin:0;
 
-	.favorite{
-	    background-image: url(../image/star.png);
-	    position: absolute;
-	    right: 10px;
-	    top: 10px;
-	    width: 1rem;
-	    height: 1rem;
-	    background-size: 1rem;
-	    &.select{
-	      background-image: url(../image/star-active.png);
+	.item{
+	    margin:0px 3px;
+	    padding:7px 0;
+	    list-style:none;
+	    border-bottom:1px solid @bodyBgColor;
+
+	    .logo{
+	        .w(65);
+	        .h(65);
+	        margin-right:13px;
+	    }
+
+	    .title{
+	        margin:0;
+	    }
+
+	    .text{
+	        margin:0;
 	    }
 	}
+}
+
+.bottom-btn{
+	position:fixed;
+	.h(45);
+	background:@headBgColor;
+	left:0;
+	right:0;
+	bottom:0;
+	width:100%;
+
+
+}
+
+.position-info{
+    border-bottom:solid 1px #ccc;
+	padding:20px 10px 15px 10px;
+
+	.ml{
+	    margin-left:20px;
+	}
+
+	img{
+	    top:40px;
+	    right:24px;
+	}
+}
+
+.company-info{
+	padding:20px 15px 1px 85px;
+
+	img{
+        .w(60);
+        .h(60);
+        left:15px;
+	}
+
+	p{
+	    margin-top:0;
+	}
+}
+
+
+.position-desc{
+	margin-top:10px;
+	.fs(16);
+
+	h5{
+	    margin-top:0;
+	    padding-left:10px;
+	    .h(40);
+	    .lh(40);
+
+	    border-bottom:1px solid #ccc;
+	}
+
+	pre{
+	    margin-left:0;
+	    padding-left:10px;
+	}
+}
+
+.position-class{
+	background:white;
+	border-top:solid 1px gray;
+	padding:13px 9px 5px 9px;
+
+	h5{
+	    margin: 0 0 35px 0;
+	}
+
+	button{
+	    background:gray;
+	    border-radius:20px;
+	    padding:10px 20px;
+
+	    &.active{
+		    background:pink;
+		    color:white;
+		}
+	}
+
 	
-	li{
-	    position: relative;
-	    list-style: none;
-	    padding: 0.2rem 0.1rem;
-	    border-bottom: 1px solid #ccc;
 
-	    img{
-		      width: 2rem;
-		      height: 2rem;
-	    }
+	ul{
+	   border-top:solid 1px gray;
+	   margin:5px 0 0 0 ;
+	   padding:0;
+	   li{
+	       list-style:none;
 
-	    p{
-	      display: inline-block;
-	      padding: 0 0 0 10px;
-	      margin: 0;
-	      width: 7rem;
-
-	      .job{
-	        font-size: 0.6rem;
-	        font-weight: bold;
-	      }
-	      .company{
-	        font-size: 0.3rem;
-	      }
-	      .info{
-	        font-size: 0.2rem;
-	        color: gray;
-	      }
-	    }
-
-	    .salary{
-	      position: absolute;
-	      right: 10px;
-	      bottom: 25px;
-	    }
-
-	    .evaluation{
-	      position: absolute;
-	      right: 10px;
-	      top: 10px;
-	      color: green;
-	    }
-
-	    .reject{
-	      position: absolute;
-	      right: 10px;
-	      top: 1rem;
-	      color: red;
-	    }
-  }
-
+	       span{
+	           color:red;
+	           right:10px;
+	           top:20px;
+	       }
+	   }
+	}
 }

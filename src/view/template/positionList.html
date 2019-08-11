@@ -1,18 +1,16 @@
-<ul class="container post-list">
+<ul class="bg-w post-list">
 
-	<li>
-		<img src="https://wx.focussend.com/images/usericon.png" alt="">
-		<p>
-			<span class="job">xxx</span><br>
-			<span class="company">
-				xxx xxx xxx
+	<li ui-sref="position({id:item.id})" class = "item" ng-repeat = "item in data">
+		<img class="f-l logo" ng-src="{{item.imgSrc}}" >
+		<h3 class="title">{{item.name}}</h3>
+		<p class="text">
+			<span >
+				{{item.companyName}}[{{item.city}}]{{item.industry}}
 			</span><br>
-			<span class="info">xxx</span><br>
+			<span >{{item.time}}</span>
 		</p>
-		 <span class="salary" >xxx</span>
-		 <span class="favorite"></span>
-		 <span  class="evaluation" >不合适</span>
-    
 	</li>
+
+
 
 </ul>
