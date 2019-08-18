@@ -1,14 +1,15 @@
 <div class="bg-w position-info p-r">
 	<p>
-		<span >销售</span>
-		<span class="ml c-r">3k-5k</span>
+		<span >{{pos.name}}</span>
+		<span class="ml c-r">{{pos.salaryName}}</span>
 	</p>
 	<p>
-		<span >上海</span>
-		<span class="ml">1-3年 专科</span>
+		<span >{{pos.cityName}}</span>
+		<span class="ml">{{pos.experience}} {{pos.education}}</span>
 	</p>
 	<p>
-		成长空间大
+		
+		{{pos.benefit}}
 	</p>
-	<img class="p-a" ng-src="{{imagePath}}">
+	<img ng-show="" class="p-a" ng-src="{{imagePath}}">
 </div>

@@ -1,5 +1,20 @@
-angular.module('app').controller('mainCtrl',['$scope',function($scope){
-	//list
+angular.module('app').controller('mainCtrl',['$http','$scope',function($http,$scope){
+
+    /*$http.get('/data/positionList.json').success(function(res){
+        console.log(res)
+
+    });*/
+
+   
+    $http({
+        method:'GET',
+        url:'/data/positionList.json'
+    }).then(function(res){
+        console.log(res.data)
+        $scope.list = res.data
+
+    })
+	/*//list
     $scope.list = [{
     	id:'1',
     	name:'销售',
@@ -17,7 +32,7 @@ angular.module('app').controller('mainCtrl',['$scope',function($scope){
     	city:'上海',
     	industry:'互联网',
     	time:'2019-8-10 9.55'
-    }]
+    }]*/
 
 
 

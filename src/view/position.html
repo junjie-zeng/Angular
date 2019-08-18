@@ -1,0 +1,12 @@
+<app-head-bar text = "职位详情"></app-head-bar>
+<app-position-info pos = "position" is-login = "isLogin"></app-position-info>
+<app-company com = "company"></app-company>
+
+<div class="bg-w position-desc">
+	
+	<h5>职位描述</h5>
+	<pre class="ta-l">{{position.description}}
+	</pre>	
+</div>
+
+<button class="bottom-btn c-w">{{isLogin ? '投个简历':'去登入'}}</button>

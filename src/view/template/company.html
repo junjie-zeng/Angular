@@ -1,9 +1,9 @@
 <div class="bg-w company-info p-r" ui-sref = "companyPosition({id:1})"><!-- 跳转公司详情 -->
-	<img class="p-a" src="image/company-1.png"/>
+	<img class="p-a" ng-src="{{com.imageUrl}}"/>
 	<p>
-		<span>慕课网</span>
+		<span>{{com.name}}</span>
 	</p>
 	<p>
-		<span>移动互联网/A轮50-150</span>
+		<span>{{com.industry}}/{{com.state}}/{{com.people}}</span>
 	</p>
 </div>

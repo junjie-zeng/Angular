@@ -6,11 +6,11 @@ angular.module('app').config(['$stateProvider','$urlRouterProvider',function($st
     	controller:'mainCtrl'
     }).state('position',{
     	url:'/position/:id',
-    	templateUrl:'view/template/position.html',
+    	templateUrl:'view/position.html', //template/
     	controller:'positionCtrl'
     }).state('companyPosition',{
         url:'/companyPosition/:id',
-        templateUrl:'view/template/companyPosition.html',
+        templateUrl:'view/companyPosition.html',
         controller:'companyPositionCtr'
     })
 
