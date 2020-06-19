@@ -32,7 +32,7 @@
     "karma-chrome-launcher": "^1.0.1",
     "karma-ie-launcher": "^1.0.0",
     "karma-jasmine": "^1.0.2",
-    "open": "^0.0.5",
+    "open": "^7.0.4",
     "run-sequence": "^1.2.2"
   }
 }
